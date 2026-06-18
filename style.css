@@ -1,0 +1,480 @@
+/* =============================================
+   DIGITAL LIBRARY MANAGEMENT SYSTEM - CSS
+   style.css
+   ============================================= */
+
+/* --- GLOBAL RESET & BASE STYLES ---
+   This removes default spacing that browsers add,
+   so our design looks the same on all browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Makes width/height calculations easier */
+}
+
+/* Base font and background for the whole page */
+body {
+    font-family: 'Open Sans', sans-serif; /* Clean readable font */
+    color: #2c2c2c;                       /* Dark grey text, easier on eyes than black */
+    background-color: #f9f6f0;            /* Warm off-white — like old book paper */
+    line-height: 1.6;                     /* Space between lines for easy reading */
+}
+
+
+/* =============================================
+   NAVIGATION BAR
+   ============================================= */
+.navbar {
+    display: flex;               /* Puts items in a row side by side */
+    justify-content: space-between; /* Pushes logo left, links center, buttons right */
+    align-items: center;         /* Aligns everything vertically in the middle */
+    background-color: #1a1a2e;   /* Deep dark blue — professional library feel */
+    padding: 15px 60px;          /* Space inside the navbar */
+    position: sticky;            /* Navbar stays at top when you scroll */
+    top: 0;
+    z-index: 100;                /* Makes sure navbar stays on top of other content */
+}
+
+/* Library name/logo in navbar */
+.logo {
+    font-family: 'Merriweather', serif; /* Serif font = classic, literary feel */
+    font-size: 24px;
+    color: #f0c040;              /* Golden yellow — like a library badge */
+    font-weight: 700;
+}
+
+/* The list of nav links */
+.nav-links {
+    list-style: none;            /* Removes the bullet points from the list */
+    display: flex;
+    gap: 30px;                   /* Space between each link */
+}
+
+/* Each individual nav link */
+.nav-links a {
+    text-decoration: none;       /* Removes underline from links */
+    color: #cccccc;              /* Light grey color */
+    font-size: 15px;
+    transition: color 0.3s;     /* Smooth color change on hover */
+}
+
+/* When you hover over a nav link */
+.nav-links a:hover {
+    color: #f0c040;              /* Turns gold on hover */
+}
+
+/* Container for Login/Register buttons */
+.nav-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+
+/* =============================================
+   REUSABLE BUTTON STYLES
+   ============================================= */
+
+/* Base style for ALL buttons */
+.btn {
+    padding: 10px 22px;
+    border-radius: 6px;          /* Slightly rounded corners */
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #f0c040;  /* Gold border on all buttons */
+    transition: all 0.3s;       /* Smooth animation on hover */
+    display: inline-block;
+}
+
+/* Outline button (transparent background) */
+.btn-outline {
+    background-color: transparent;
+    color: #f0c040;
+}
+
+.btn-outline:hover {
+    background-color: #f0c040;
+    color: #1a1a2e;
+}
+
+/* Solid button (filled background) */
+.btn-solid {
+    background-color: #f0c040;
+    color: #1a1a2e;
+}
+
+.btn-solid:hover {
+    background-color: #d4a800;  /* Darker gold on hover */
+    border-color: #d4a800;
+}
+
+/* Large version of button for CTA section */
+.btn-large {
+    padding: 16px 40px;
+    font-size: 16px;
+}
+
+
+/* =============================================
+   HERO SECTION (Big Banner)
+   ============================================= */
+.hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    /* linear-gradient = smooth color transition from dark blue to navy */
+    color: white;
+    padding: 100px 60px;
+    text-align: center;
+}
+
+/* The heading in the hero */
+.hero-content h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 52px;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+/* The golden highlighted word in the heading */
+.highlight {
+    color: #f0c040;
+}
+
+/* The paragraph text under the heading */
+.hero-content p {
+    font-size: 18px;
+    color: #c0c0c0;
+    max-width: 600px;            /* Limits line width so it doesn't stretch too wide */
+    margin: 0 auto 40px;         /* Centers the paragraph */
+}
+
+/* Search bar container */
+.search-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 60px;
+}
+
+/* The text input inside search box */
+.search-box input {
+    width: 480px;
+    padding: 14px 20px;
+    border-radius: 6px;
+    border: none;
+    font-size: 15px;
+    outline: none;               /* Removes blue outline on click */
+}
+
+/* Stats row (Numbers like 12,500+ Books) */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+/* Each stat block */
+.stat-item h3 {
+    font-size: 32px;
+    color: #f0c040;
+    font-family: 'Merriweather', serif;
+}
+
+.stat-item p {
+    color: #aaaaaa;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+
+/* =============================================
+   SECTION TITLES (Reused across all sections)
+   ============================================= */
+.section-title {
+    font-family: 'Merriweather', serif;
+    font-size: 32px;
+    text-align: center;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #777777;
+    font-size: 15px;
+    margin-bottom: 50px;
+}
+
+
+/* =============================================
+   FEATURES SECTION
+   ============================================= */
+.features {
+    padding: 80px 60px;
+    background-color: #ffffff;
+}
+
+/* Grid layout for feature cards — 3 per row */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Each feature card */
+.feature-card {
+    background-color: #f9f6f0;
+    border: 1px solid #e8e0d0;
+    border-radius: 10px;
+    padding: 35px 25px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; /* Hover animation */
+}
+
+/* Lift the card on hover */
+.feature-card:hover {
+    transform: translateY(-6px);         /* Moves card 6px upward */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Emoji icon in feature card */
+.feature-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #1a1a2e;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: #666666;
+}
+
+
+/* =============================================
+   POPULAR BOOKS SECTION
+   ============================================= */
+.popular-books {
+    padding: 80px 60px;
+    background-color: #f9f6f0;
+}
+
+/* Grid for book cards — 4 per row */
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Each book card */
+.book-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;            /* Keeps the colored cover inside the rounded card */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+}
+
+/* The colored top part of the book card (acts as book cover) */
+.book-cover {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+}
+
+/* Book details section below the cover */
+.book-info {
+    padding: 15px;
+}
+
+.book-info h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 5px;
+}
+
+.book-info .author {
+    font-size: 13px;
+    color: #888888;
+}
+
+.book-info .genre {
+    font-size: 12px;
+    color: #aaaaaa;
+    margin-bottom: 10px;
+}
+
+/* Green badge for available books */
+.available {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Red badge for checked out books */
+.unavailable {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =============================================
+   HOW IT WORKS SECTION
+   ============================================= */
+.how-it-works {
+    padding: 80px 60px;
+    background-color: #ffffff;
+}
+
+/* Row layout for the 3 steps */
+.steps-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Each step block */
+.step {
+    text-align: center;
+    max-width: 220px;
+}
+
+/* The big number circle */
+.step-number {
+    width: 60px;
+    height: 60px;
+    background-color: #f0c040;
+    color: #1a1a2e;
+    border-radius: 50%;          /* Makes it a circle */
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+.step h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #1a1a2e;
+}
+
+.step p {
+    font-size: 13px;
+    color: #666666;
+}
+
+/* The arrow between steps */
+.step-arrow {
+    font-size: 30px;
+    color: #f0c040;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+
+/* =============================================
+   CALL TO ACTION (CTA) SECTION
+   ============================================= */
+.cta {
+    background: linear-gradient(135deg, #0f3460, #1a1a2e);
+    text-align: center;
+    padding: 80px 60px;
+    color: white;
+}
+
+.cta h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    font-size: 16px;
+    color: #bbbbbb;
+    margin-bottom: 35px;
+}
+
+
+/* =============================================
+   FOOTER
+   ============================================= */
+.footer {
+    background-color: #0d0d1a;   /* Very dark background */
+    color: #aaaaaa;
+    padding: 60px 60px 0;
+}
+
+/* 4-column grid for footer */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* Each column in the footer */
+.footer-col h3 {
+    color: #f0c040;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer-col p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #aaaaaa;
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #f0c040;
+}
+
+/* Bottom bar of the footer */
+.footer-bottom {
+    border-top: 1px solid #2a2a3e;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 13px;
+    color: #555555;
+}

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- This tells the browser what kind of characters to use -->
+    <meta charset="UTF-8">
+    <!-- This makes the page look good on mobile screens too -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title shown on the browser tab -->
+    <title>Digital Library Management System</title>
+    <!-- Linking our CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Font for a nice library-style look -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ========== NAVIGATION BAR ========== -->
+    <nav class="navbar">
+        <!-- Library Logo / Brand Name -->
+        <div class="logo">
+            📚 LibraNet
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Catalog</a></li>
+            <li><a href="#">E-Books</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <!-- Login and Register Buttons -->
+        <div class="nav-buttons">
+            <a href="#" class="btn btn-outline">Login</a>
+            <a href="#" class="btn btn-solid">Register</a>
+        </div>
+    </nav>
+
+
+    <!-- ========== HERO SECTION (Big Banner at Top) ========== -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your Gateway to <span class="highlight">Knowledge</span></h1>
+            <p>Explore thousands of books, reserve titles, download e-books, and manage your reading journey — all in one place.</p>
+
+            <!-- Search Bar -->
+            <div class="search-box">
+                <input type="text" placeholder="Search by title, author, or ISBN...">
+                <button class="btn btn-solid">🔍 Search</button>
+            </div>
+
+            <!-- Quick Stats below the search bar -->
+            <div class="stats">
+                <div class="stat-item">
+                    <h3>12,500+</h3>
+                    <p>Books Available</p>
+                </div>
+                <div class="stat-item">
+                    <h3>3,200+</h3>
+                    <p>Active Members</p>
+                </div>
+                <div class="stat-item">
+                    <h3>800+</h3>
+                    <p>E-Books</p>
+                </div>
+                <div class="stat-item">
+                    <h3>5</h3>
+                    <p>Branches</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========== FEATURES SECTION ========== -->
+    <section class="features">
+        <h2 class="section-title">What You Can Do</h2>
+        <p class="section-subtitle">Everything you need to manage and enjoy your library experience</p>
+
+        <!-- Feature Cards Grid -->
+        <div class="features-grid">
+
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3>Search Catalog</h3>
+                <p>Find books easily by title, author, genre, or ISBN with advanced filters.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📖</div>
+                <h3>Borrow Books</h3>
+                <p>Issue books online and track your borrowing history anytime.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔖</div>
+                <h3>Reserve Titles</h3>
+                <p>Reserve books that are currently checked out and get notified when available.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>QR Code Checkout</h3>
+                <p>Each book has a unique QR code for quick and easy checkout at the counter.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">💻</div>
+                <h3>E-Books</h3>
+                <p>Download digital copies of available titles and read anywhere, anytime.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Reading Lists</h3>
+                <p>Create your own curated reading lists and share them with others.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========== POPULAR BOOKS SECTION ========== -->
+    <section class="popular-books">
+        <h2 class="section-title">Popular Books This Week</h2>
+        <p class="section-subtitle">Most borrowed titles by our members</p>
+
+        <!-- Book Cards -->
+        <div class="books-grid">
+
+            <div class="book-card">
+                <div class="book-cover" style="background-color: #c0392b;">
+                    <span>📘</span>
+                </div>
+                <div class="book-info">
+                    <h4>The Great Gatsby</h4>
+                    <p class="author">F. Scott Fitzgerald</p>
+                    <p class="genre">Fiction</p>
+                    <span class="available">Available</span>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="book-cover" style="background-color: #1a5276;">
+                    <span>📗</span>
+                </div>
+                <div class="book-info">
+                    <h4>Atomic Habits</h4>
+                    <p class="author">James Clear</p>
+                    <p class="genre">Self-Help</p>
+                    <span class="available">Available</span>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="book-cover" style="background-color: #1e8449;">
+                    <span>📙</span>
+                </div>
+                <div class="book-info">
+                    <h4>To Kill a Mockingbird</h4>
+                    <p class="author">Harper Lee</p>
+                    <p class="genre">Classic</p>
+                    <span class="unavailable">Checked Out</span>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="book-cover" style="background-color: #6c3483;">
+                    <span>📕</span>
+                </div>
+                <div class="book-info">
+                    <h4>1984</h4>
+                    <p class="author">George Orwell</p>
+                    <p class="genre">Dystopian</p>
+                    <span class="available">Available</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========== HOW IT WORKS SECTION ========== -->
+    <section class="how-it-works">
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-subtitle">Get started in just 3 simple steps</p>
+
+        <div class="steps-grid">
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Register</h3>
+                <p>Create your free member account with your name, email, and student/employee ID.</p>
+            </div>
+
+            <div class="step-arrow">→</div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Search & Reserve</h3>
+                <p>Browse the catalog, search for your favourite books, and reserve or borrow them.</p>
+            </div>
+
+            <div class="step-arrow">→</div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Read & Return</h3>
+                <p>Collect your book or download the e-book, read it, and return it before the due date.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========== CALL TO ACTION SECTION ========== -->
+    <section class="cta">
+        <h2>Ready to Start Reading?</h2>
+        <p>Join thousands of members who are already using LibraNet to discover and borrow books.</p>
+        <a href="#" class="btn btn-solid btn-large">Create Free Account</a>
+    </section>
+
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer-grid">
+
+            <!-- About Column -->
+            <div class="footer-col">
+                <h3>📚 LibraNet</h3>
+                <p>A modern digital library management system built to make knowledge accessible to everyone.</p>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Book Catalog</a></li>
+                    <li><a href="#">E-Books</a></li>
+                    <li><a href="#">My Account</a></li>
+                </ul>
+            </div>
+
+            <!-- For Members Column -->
+            <div class="footer-col">
+                <h3>For Members</h3>
+                <ul>
+                    <li><a href="#">Borrowing History</a></li>
+                    <li><a href="#">Reservations</a></li>
+                    <li><a href="#">Reading Lists</a></li>
+                    <li><a href="#">Pay Fine</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Column -->
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>📧 gundashivani8@gmail.com</li>
+                    <li>📞 +91 9391199339</li>
+                    <li>📍 Sage Univarsity,Indore.  Block M</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom bar of footer -->
+        <div class="footer-bottom">
+            <p>© 2025 LibraNet — Digital Library Management System. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
